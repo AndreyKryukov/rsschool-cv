@@ -92,8 +92,18 @@ body {
   background-color: #e8e8e9;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
 header {
-  padding: 40px 20px;
+  padding: 40px 0;
   text-align: center;
   background-color: #161b25;
 }
@@ -184,15 +194,18 @@ article {
   line-height: 25px;
 }
 
+.text-article li a,
 .text-article p a {
   color: #555;
 }
 
+.text-article li a:hover,
 .text-article p a:hover {
   color: #2e5dbd;
   transition: 0.5s;
 }
 
+.text-article li a:active,
 .text-article p a:active {
   color: rgb(0, 24, 242);
 }
@@ -238,4 +251,38 @@ section {
   height: 1px;
   left: 50%;
   background-color: #000;
+}
+
+.text-section ul li {
+  margin-left: 20px;
+  list-style: decimal;
+}
+
+footer {
+  padding: 20px 0;
+  flex: 0 0 auto;
+  text-align: center;
+  background-color: #495263;
+}
+
+.footer-body {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-body a {
+  padding: 0 20px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 1px #161b25;
+}
+.footer-body a:hover {
+  color: #95a126;
+  transition: 1s;
+}
+.footer-year {
+  font-size: 15px;
+  color: #fff;
 }
