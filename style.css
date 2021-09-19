@@ -257,3 +257,32 @@ section {
   margin-left: 20px;
   list-style: decimal;
 }
+
+footer {
+  padding: 20px 0;
+  flex: 0 0 auto;
+  text-align: center;
+  background-color: #495263;
+}
+
+.footer-body {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-body a {
+  padding: 0 20px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 1px #161b25;
+}
+.footer-body a:hover {
+  color: #95a126;
+  transition: 1s;
+}
+.footer-year {
+  font-size: 15px;
+  color: #fff;
+}
