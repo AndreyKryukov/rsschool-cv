@@ -10,6 +10,7 @@ At the moment I have been working for a private company engaged in metalworking 
 * Git / Github
 * Pixel Perfect, Figma, Avocode
 * TypeScript (base), NodeJS (base)
+
 ## Code examples
 ```javascript
 function squareDigits(num){
