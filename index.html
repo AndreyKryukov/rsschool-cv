@@ -6,13 +6,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <title>CV</title>
 </head>
 
 <body>
   <div class="wrapper">
     <div class="content">
-      <header>
+      <div class="burger-menu">
+        <a href="#" class="burger-menu__button">
+          <span class="burger-menu__lines"></span>
+        </a>
+        <nav class="burger-menu__nav">
+          <a href="#i" class="burger-menu__link">Who is this?</a>
+          <a href="#contact" class="burger-menu__link">Contact Information</a>
+          <a href="#education" class="burger-menu__link">Education</a>
+          <a href="#language" class="burger-menu__link">English language</a>
+          <a href="#aboutMe" class="burger-menu__link">About Me</a>
+          <a href="#skills" class="burger-menu__link">Skills</a>
+          <a href="#codeExample" class="burger-menu__link">Code example</a>
+          <a href="#experience" class="burger-menu__link">Experience</a>
+        </nav>
+
+        <div class="burger-menu__overlay"></div>
+      </div>
+      <header id="i">
         <div class="container">
           <div class="header-column">
             <div class="header-body">
@@ -20,7 +40,7 @@
                 <h1>Andrey Kryukov</h1>
               </div>
               <div class="header-text">
-                <h2>Process engineer and student RS School</h2>
+                <h2>Junior Frontend Developer</h2>
               </div>
             </div>
             <div class="header-photo">
@@ -33,7 +53,7 @@
         <div class="container">
           <div class="main-body">
             <article>
-              <div class="contact">
+              <div class="contact" id="contact">
                 <div class="title-article">
                   <h3>Contact Information</h3>
                 </div>
@@ -45,7 +65,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="education">
+              <div class="education" id="education">
                 <div class="title-article">
                   <h3>Education</h3>
                 </div>
@@ -55,7 +75,7 @@
                   <p>2013 - 2018</p>
                 </div>
               </div>
-              <div class="language">
+              <div class="language" id="language">
                 <div class="title-article">
                   <h3>English language</h3>
                 </div>
@@ -65,7 +85,7 @@
               </div>
             </article>
             <section>
-              <div class="aboutMe">
+              <div class="aboutMe" id="aboutMe">
                 <div class="title-section">
                   <h3>About Me</h3>
                 </div>
@@ -79,7 +99,7 @@
                   </p>
                 </div>
               </div>
-              <div class="skills">
+              <div class="skills" id="skills">
                 <div class="title-section">
                   <h3>Skills</h3>
                 </div>
@@ -93,11 +113,11 @@
                   </ul>
                 </div>
               </div>
-              <div class="codeExample">
+              <div class="codeExample" id="codeExample">
                 <div class="title-section">
                   <h3>Code examples</h3>
                 </div>
-                <pre>
+                <pre><code class="js">
 function squareDigits(num){
   let numArr = String(num).split('');
   let numNew = [];
@@ -107,9 +127,9 @@ function squareDigits(num){
   let numEnd = numNew.join('');
   return numEnd = + numEnd;
 }
-            </pre>
+              </code></pre>
               </div>
-              <div class="experience">
+              <div class="experience" id="experience">
                 <div class="title-section">
                   <h3>Experience</h3>
                 </div>
@@ -127,7 +147,8 @@ function squareDigits(num){
     <footer>
       <div class="container">
         <div class="footer-body">
-          <a href="https://github.com/AndreyKryukov" target="_blank">Andrey Kryukov</a>
+          <a class="footer-github" href="https://github.com/AndreyKryukov" target="_blank"
+            rel="noopener noreferrer"></a>
           <a href="https://rs.school/js/" target="_blank">
             <img src="./assets/img/rs_school_js.png" alt="logoRSS">
           </a>
@@ -138,6 +159,7 @@ function squareDigits(num){
       </div>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
