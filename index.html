@@ -6,13 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <title>CV</title>
 </head>
 
 <body>
   <div class="wrapper">
     <div class="content">
-      <header>
+      <div class="burger-menu">
+        <a href="#" class="burger-menu__button">
+          <span class="burger-menu__lines"></span>
+        </a>
+        <nav class="burger-menu__nav">
+          <a href="#i" class="burger-menu__link">Who is this?</a>
+          <a href="#contact" class="burger-menu__link">Contact Information</a>
+          <a href="#education" class="burger-menu__link">Education</a>
+          <a href="#language" class="burger-menu__link">English language</a>
+          <a href="#aboutMe" class="burger-menu__link">About Me</a>
+          <a href="#skills" class="burger-menu__link">Skills</a>
+          <a href="#codeExample" class="burger-menu__link">Code example</a>
+          <a href="#experience" class="burger-menu__link">Experience</a>
+        </nav>
+        <div class="burger-menu__overlay"></div>
+      </div>
+      <header id="i">
         <div class="container">
           <div class="header-column">
             <div class="header-body">
@@ -20,7 +39,7 @@
                 <h1>Andrey Kryukov</h1>
               </div>
               <div class="header-text">
-                <h2>Process engineer and student RS School</h2>
+                <h2>Junior Frontend Developer</h2>
               </div>
             </div>
             <div class="header-photo">
@@ -33,7 +52,7 @@
         <div class="container">
           <div class="main-body">
             <article>
-              <div class="contact">
+              <div class="contact" id="contact">
                 <div class="title-article">
                   <h3>Contact Information</h3>
                 </div>
@@ -45,7 +64,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="education">
+              <div class="education" id="education">
                 <div class="title-article">
                   <h3>Education</h3>
                 </div>
@@ -55,7 +74,7 @@
                   <p>2013 - 2018</p>
                 </div>
               </div>
-              <div class="language">
+              <div class="language" id="language">
                 <div class="title-article">
                   <h3>English language</h3>
                 </div>
@@ -65,7 +84,7 @@
               </div>
             </article>
             <section>
-              <div class="aboutMe">
+              <div class="aboutMe" id="aboutMe">
                 <div class="title-section">
                   <h3>About Me</h3>
                 </div>
@@ -78,8 +97,15 @@
                     to achieve my goals.
                   </p>
                 </div>
+                <div class="aboutMe__video">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/r4rqaDO2F1Y"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                  </iframe>
+                </div>
               </div>
-              <div class="skills">
+              <div class="skills" id="skills">
                 <div class="title-section">
                   <h3>Skills</h3>
                 </div>
@@ -93,12 +119,11 @@
                   </ul>
                 </div>
               </div>
-              <div class="codeExample">
+              <div class="codeExample" id="codeExample">
                 <div class="title-section">
                   <h3>Code examples</h3>
                 </div>
-                <pre>
-function squareDigits(num){
+                <pre><code class="js">function squareDigits(num){
   let numArr = String(num).split('');
   let numNew = [];
   for (let i = 0; i &lt; numArr.length; i++) {
@@ -106,17 +131,89 @@ function squareDigits(num){
   }
   let numEnd = numNew.join('');
   return numEnd = + numEnd;
-}
-            </pre>
+}								</code></pre>
               </div>
-              <div class="experience">
+              <div class="experience" id="experience">
                 <div class="title-section">
                   <h3>Experience</h3>
                 </div>
-                <div class="text-article">
-                  <p>
-                    <a href="https://app.rs.school/certificate/8duojyjd" target="_blank">JS/FE Pre-School</a>
-                  </p>
+                <div class="experience__projects">
+                  <div class="project">
+                    <a href="https://rolling-scopes-school.github.io/andreykryukov-JSFE2021Q1/wildlife/"
+                      target="_blank">
+                      <div class="project__img wildlife__img"></div>
+                    </a>
+                    <div class="project__body">
+                      <a href="https://rolling-scopes-school.github.io/stage0/#/stage0/tasks/wildlife" target="_blank"
+                        class="project__title">
+                        Wildlife
+                      </a>
+                      <p class="project__text">Used HTML and CSS on flex (no adaptive)</p>
+                    </div>
+                  </div>
+                  <div class="project">
+                    <a href="https://rolling-scopes-school.github.io/andreykryukov-JSFEPRESCHOOL/photofilter/"
+                      target="_blank">
+                      <div class="project__img photofilter__img"></div>
+                    </a>
+                    <div class="project__body">
+                      <a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/js30/js30-5.md"
+                        target="_blank" class="project__title">
+                        Photofilter
+                      </a>
+                      <p class="project__text">Used HTML,CSS and JS (adaptive)</p>
+                    </div>
+                  </div>
+                  <div class="project">
+                    <a href="https://rolling-scopes-school.github.io/andreykryukov-JSFEPRESCHOOL/drum-kit/"
+                      target="_blank">
+                      <div class="project__img drum-kit__img"></div>
+                    </a>
+                    <div class="project__body">
+                      <a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/js30/js30-1.md"
+                        target="_blank" class="project__title">
+                        Drum kit
+                      </a>
+                      <p class="project__text">Used HTML,CSS and JS (work with sound)</p>
+                    </div>
+                  </div>
+                  <div class="project">
+                    <a href="https://rolling-scopes-school.github.io/andreykryukov-JSFEPRESCHOOL/museum/"
+                      target="_blank">
+                      <div class="project__img museum__img"></div>
+                    </a>
+                    <div class="project__body">
+                      <a href="https://github.com/rolling-scopes-school/tasks/blob/master/tasks/museum/museum.md"
+                        target="_blank" class="project__title">
+                        Museum
+                      </a>
+                      <p class="project__text">Used HTML and CSS on flex (no adaptive)</p>
+                    </div>
+                  </div>
+                  <div class="project">
+                    <a href="https://rolling-scopes-school.github.io/andreykryukov-JSFE2021Q1/online-zoo/pages/Landing/Landing.html"
+                      target="_blank">
+                      <div class="project__img online-zoo__img"></div>
+                    </a>
+                    <div class="project__body">
+                      <a href="https://rolling-scopes-school.github.io/stage0/#/stage1/tasks/online-zoo/variant-3"
+                        target="_blank" class="project__title">
+                        Online Zoo
+                      </a>
+                      <p class="project__text">Used HTML, CSS and JS on flex (adaptive)</p>
+                    </div>
+                  </div>
+                  <div class="project">
+                    <a href="https://app.rs.school/certificate/8duojyjd" target="_blank">
+                      <div class="project__img certificate-rss__img"></div>
+                    </a>
+                    <div class="project__body">
+                      <a href="https://app.rs.school/certificate/8duojyjd" target="_blank" class="project__title">
+                        Certificate RS School
+                      </a>
+                      <p class="project__text">JS/FE Pre-School (JavaScript)</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -127,17 +224,19 @@ function squareDigits(num){
     <footer>
       <div class="container">
         <div class="footer-body">
-          <a href="https://github.com/AndreyKryukov" target="_blank">Andrey Kryukov</a>
+          <a class="footer-github" href="https://github.com/AndreyKryukov" target="_blank"
+            rel="noopener noreferrer"></a>
           <a href="https://rs.school/js/" target="_blank">
             <img src="./assets/img/rs_school_js.png" alt="logoRSS">
           </a>
         </div>
         <div class="footer-year">
-          <p>&#169; 2021</p>
+          <p>Kryukov Andrey<br>&#169; 2021</p>
         </div>
       </div>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
